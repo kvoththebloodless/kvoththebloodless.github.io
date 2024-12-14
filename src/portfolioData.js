@@ -797,7 +797,7 @@ const portfolioData = {
         title: "Obi rope was also used to carry out some rope cutting and trolley systems."
         },
         {
-          ...blogs[1]
+          ...blogs[2]
         },
       ]
     },
