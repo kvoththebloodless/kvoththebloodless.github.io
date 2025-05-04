@@ -712,7 +712,7 @@ const portfolioData = {
   links: [
     {
       ...portfolio_types.ICON_TYPES.RESUME,
-      link: 'https://drive.google.com/file/d/1TeSsqsNpOI3QtdA-86nEfs4M6WwNNvoL/view?usp=sharing'
+      link: 'https://drive.google.com/file/d/16kqykEDrYfewDRR9IF8Y7cs-X2QUrbtR/view?usp=drive_link'
     },
     {
       ...portfolio_types.ICON_TYPES.GITHUB,
@@ -812,7 +812,7 @@ const portfolioData = {
       },
       {
         video: {
-          link: 'https://ik.imagekit.io/p9k6bhc9p/D&D/WhatsApp%20Video%202024-12-13%20at%2020.55.22%20(4).mp4?updatedAt=1746313529013'
+          link: 'https://imagekit.io/player/embed/p9k6bhc9p/D&D/WhatsApp%20Video%202024-12-13%20at%2020.55.22%20(4).mp4?updatedAt=1746313529013&ik-s=32471609a509e047d794b8ddc90faa96b650f5c6'
         },
         title: 'Dread Spider',
         subtitle: 'Dread spider (Homebrew beast), are spiders that live as a mysterious force on a cognitive realm. They take on the form of a spider while in the physical realm. They are creatures of the night, but misunderstood often.',
