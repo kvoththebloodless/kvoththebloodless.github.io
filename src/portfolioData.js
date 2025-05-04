@@ -422,7 +422,7 @@ const jobs =[
   {
     id: 'appetizer',
     time: "06/2020-12/2020",
-    team: "Gourav Acharya, Unnamed Developer",
+    team: "Gourav Acharya",
     image: {
       link: 'https://appetizermobile.com/wp-content/uploads/2016/01/AppetizerMobile-logo_dark.png'
     },
@@ -614,14 +614,99 @@ const jobs =[
     ]
 
 
-  }
+  },
+        {
+      id: 'legendaryheroes',
+      time: "April 2023-Dec 2024",
+      team: "Gourav Acharya, N3TWORK Studios Team",
+      image: {
+        link: 'https://www.n3twork.com/wp-content/uploads/2023/01/blog-post-logo-600x403.jpg' // Replace with actual local image path
+      },
+    
+      //Grid Data for home page
+      title: 'Client Game Engineer at N3twork Studios',
+      span: 1,
+      externallink: "/job/legendaryheroes",
+      description: 'Legendary Heroes Unchained is a free-to-play card battler game developed for WebGL.',
+    
+      // Grid Data for Detail Project Page
+      sections: [
+        {
+          title: 'As a Game Engineer, I developed core game features and optimized performance for Legendary Heroes Unchained.',
+          image: {
+            link: 'https://ik.imagekit.io/p9k6bhc9p/Screenshot%202025-05-04%20at%202.44.52%E2%80%AFAM.png?updatedAt=1746312380501' // Replace with actual local image path
+          }
+        },
+        {
+          title: 'Guilds Feature',
+          span: 2,
+          description: 'Implemented community-driven features like Guilds, which included:',
+          list: [
+            { label: 'In-game chat for players to communicate.' },
+            { label: 'A technology system where players pooled XP to activate buffs.' },
+            { label: 'Leaderboard and event pages to track progress and achievements.' }
+          ],
+          image: {
+            link: 'https://ik.imagekit.io/p9k6bhc9p/Screenshot%202025-05-04%20at%203.22.35%E2%80%AFAM.png?updatedAt=1746312378426' // Replace with actual local image path
+          }
+        },
+        {
+          title: 'Fusion System',
+          span: 2,
+          description: 'Developed the Fusion system, allowing players to combine heroes to create new skills with features like:',
+          list: [
+            { label: 'Awakening, upgrading, or inheriting skills from burned heroes.' },
+            { label: 'Custom hero combinations with unique abilities.' }
+          ],
+          image: {
+            link: 'https://ik.imagekit.io/p9k6bhc9p/Screenshot%202025-05-04%20at%206.21.09%E2%80%AFPM.png?updatedAt=1746363224322' // Replace with actual local image path
+          }
+        },
+        {
+          title: 'Battle System Optimization',
+          span: 2,
+          description: 'Enhanced the battle system by:',
+          list: [
+            { label: 'Optimizing simulation code and restructuring it for VFX event triggers.' },
+            { label: 'Streamlining workflows for artists and reducing per-frame memory allocation by 30%.' }
+          ]
+        },
+        {
+          title: 'Memory Optimization',
+          span: 2,
+          description: 'Achieved significant memory usage improvements:',
+          list: [
+            { label: 'Reduced per-frame memory allocation in the core battle loop by 30%.' },
+            { label: 'Reduced Guild Chat memory usage by 80% through extensive object pooling.' }
+          ]
+        },
+        {
+          title: 'LiveOps and Cross-Functional Collaboration',
+          span: 2,
+          description: 'Acted as the primary LiveOps engineer, resolving critical issues and improving release efficiency. Responsibilities included:',
+          list: [
+            { label: 'Authoring Technical Design Documents.' },
+            { label: 'Leading Engineering LiveOps meetings and triaging tickets.' },
+            { label: 'Supporting DevOps tasks and ensuring smooth operations.' }
+          ]
+        },
+        {
+          title: 'Made using',
+          list: [
+            { label: 'Unity' },
+            { label: 'C#' },
+            { label: 'WebGL' }
+          ]
+        }
+      ]
+    }
 ]
 const portfolioData = {
 
   // My Profile Data
   title: 'Gourav Acharya',
   subtitle: 'I tell stories. Currently through games.',
-  location:"Santa Ana, California",
+  location:"Mountain view, California",
   visastatus:"On H1B",
   email:"gouravacharya19@gmail.com",
   links: [
@@ -639,6 +724,207 @@ const portfolioData = {
     }
   ],
 
+ // Dungeons and Dragons Section
+ dungeonsAndDragons: 
+  [
+   { title: 'Dungeons & Dragons',
+    image: {
+      link: 'https://ik.imagekit.io/p9k6bhc9p/D&D/WhatsApp%20Image%202024-12-13%20at%2020.55.22%20(26).jpeg'
+    },
+    description: 'A gallery of my long running D&D campaign called Blood Awakening',
+    externallink: "/dungeons-and-dragons",
+    sections: [
+      {
+        image: {
+          link: 'https://ik.imagekit.io/p9k6bhc9p/D&D/PXL_20240818_193335652.jpg'
+        },
+        title: 'A Galleon ship called The Grave Betrayer',
+        subtitle: 'Made in house with cardboard, popsicle sticks, hot glue, acrylic paint and a lot of patience. This ship was commandeered by King Regent Rahwin Godsworn to save his team of heroes.',
+        span: 2
+      },
+      {
+        title: 'Testimony from Y.G',
+        subtitle: '"The level of detail in the campaign is extraordinary. I once stumbled across a diary belonging to an NPC in a locked box. At first, we couldn’t figure out what it meant, but it immediately piqued my curiosity. A few sessions later, we revisited it, and it revealed some major secrets—a fun bonus for exploring! From intricate timelines to immersive in-game artifacts, every detail feels thoughtfully connected."',
+        span: 2
+      },
+      {
+        image: {
+          link: 'https://ik.imagekit.io/p9k6bhc9p/D&D/PXL_20230806_181004419.jpg'
+        },
+        title: 'Stealthy Infiltration',
+        subtitle: 'Designing a stealthy infiltration in an abandoned church.',
+        span: 2
+      },
+      {
+        title: 'Testimony from G.N',
+        subtitle: '"Wow, I never thought I\'d say this, but Gourav has completely transformed my view of Dungeons & Dragons! His storytelling is absolutely mind-blowing. The way he weaves intricate plots and creates vivid characters makes me feel like I\'m truly living in another realm. I find myself thinking about our campaign even when we\'re not playing!"',
+        span: 2
+      },
+      {
+        image: {
+          link: 'https://ik.imagekit.io/p9k6bhc9p/D&D/PXL_20240229_022417269.LONG_EXPOSURE-01.COVER.jpg'
+        },
+        title: 'A Blood Awakening',
+        subtitle: 'There atop the tower, under the blood soaked moon, stood a plump set man with round spectacles. His form stopped and wizened, his purpose...A Blood Awakening.',
+        span: 2
+      },
+      {
+        title: 'Feedback from GVA',
+        subtitle: '"What stands out most is the effort Gourav puts into ensuring every detail connects. Hints and story points introduced in sessions 1 and 2 tie back beautifully in session 9, making the world feel cohesive and thoughtfully planned. No thread feels forgotten, and there’s always a sense that something deeper is brewing beneath the surface. Every twist feels intentional, making the journey all the more rewarding."',
+        span: 2
+      },
+      {
+        image: {
+          link: 'https://ik.imagekit.io/p9k6bhc9p/D&D/PXL_20230807_000539203.jpg?updatedAt=1746313503119'
+        },
+        title: 'Guardian Nagas Battle',
+        subtitle: 'Designing a one-shot battle with Guardian Nagas and powered abilities based on Arcane relics that the players choose to interact with. A dance of puzzles and combat.',
+        span: 2
+      },
+      {
+        image: {
+          link: 'https://ik.imagekit.io/p9k6bhc9p/D&D/15.jpeg?updatedAt=1746313520616'
+        },
+        title: 'First High Production Set',
+        subtitle: 'The glory of my first high production set.',
+        span: 2
+      },
+      {
+        title: 'Feedback from EC',
+        subtitle: '"Gourav is an excellent storyteller. Through his campaign, I felt deeply immersed through the delivery of his lines, the handmade sets, the background music - every detail kept me and my fellow players not only engaged but truly mesmerized by the world he was building. The care he put into the models alone was incredible, speaking as an artist it made my heart sing! But it doesn\'t stop there - not only did he do a masterful job delivering the story he had planned for us, he is incredibly quick on his feet, rolling with every punch, stab, and questionable choice we threw at him."',
+        span: 2
+      },
+      {
+        image: {
+          link: 'https://ik.imagekit.io/p9k6bhc9p/D&D/IMG_20230513_222255.jpg?updatedAt=1746313517933'
+        },
+        title: 'Simpler Times',
+        subtitle: 'Simpler times during Campaign 1 when I was still iterating on my set design process. This was supposed to be an arena surrounded by a slum.',
+        span: 2
+      },
+      {
+        video: {
+          link: 'https://imagekit.io/player/embed/p9k6bhc9p/D&D/IMG_5991.MOV?updatedAt=1746313515730&thumbnail=https%3A%2F%2Fik.imagekit.io%2Fp9k6bhc9p%2FD%26D%2FIMG_5991.MOV%2Fik-thumbnail.jpg'
+        },
+        title: 'Roleplaying as a Dwarven Chief',
+        subtitle: 'Every DM has to roleplay an old chief of the dwarven kingdom once in a while!',
+        span: 2
+      },
+      {
+        video: {
+          link: 'https://ik.imagekit.io/p9k6bhc9p/D&D/WhatsApp%20Video%202024-12-13%20at%2020.55.22%20(4).mp4?updatedAt=1746313529013'
+        },
+        title: 'Dread Spider',
+        subtitle: 'Dread spider (Homebrew beast), are spiders that live as a mysterious force on a cognitive realm. They take on the form of a spider while in the physical realm. They are creatures of the night, but misunderstood often.',
+        span: 2
+      },
+      {
+        image: {
+          link: 'https://ik.imagekit.io/p9k6bhc9p/D&D/PXL_20230520_062526230.jpg'
+        },
+        title: 'Final Battle of Campaign 1',
+        subtitle: 'Campaign 1, one of the final battles. Here there be displacer beasts!',
+        span: 2
+      },
+      {
+        image: {
+          link: 'https://ik.imagekit.io/p9k6bhc9p/D&D/WhatsApp%20Image%202024-12-13%20at%2020.55.22%20(31).jpeg?updatedAt=1746313522885'
+        },
+        title: 'Biggest Set Ever',
+        subtitle: 'My biggest set ever, the production value here was high I can proudly say. I designed the level for weeks. The battle lasted 6 hours. The party narrowly escaped.',
+        span: 2
+      },
+      {
+        image: {
+          link: 'https://ik.imagekit.io/p9k6bhc9p/D&D/PXL_20240818_195124587.jpg?updatedAt=1746313519060'
+        },
+        title: 'Once Upon a Time One-Shot',
+        subtitle: 'A snapshot from my Once upon a time one-shot. Yes, that\'s Pinocchio facing Captain Hook.',
+        span: 2
+      },
+      {
+        image: {
+          link: 'https://ik.imagekit.io/p9k6bhc9p/D&D/PXL_20240915_194053345.jpg?updatedAt=1746313515880'
+        },
+        title: 'Sunny Look of the Set',
+        subtitle: 'A more sunny look of the set.',
+        span: 2
+      },
+      {
+        image: {
+          link: 'https://ik.imagekit.io/p9k6bhc9p/D&D/news2.jpeg?updatedAt=1746313512262'
+        },
+        title: 'Dwarvenheim News',
+        subtitle: 'Dwarvenheim is the kingdom of Dwarves that lives under the solitary mountain near the fjord of Ambrosia. A news article highlights some civil unrest in Dwarvenheim. This was part of the loot dropped from the 6-hour battle.',
+        span: 2
+      },
+      {
+        image: {
+          link: 'https://ik.imagekit.io/p9k6bhc9p/D&D/PXL_20240818_193346327.MP.jpg?updatedAt=1746313512802'
+        },
+        title: 'Arrrr',
+        subtitle: 'Arrrr',
+        span: 2
+      },
+      {
+        image: {
+          link: 'https://ik.imagekit.io/p9k6bhc9p/D&D/WhatsApp%20Image%202024-12-13%20at%2020.55.22%20(26).jpeg?updatedAt=1746313509258'
+        },
+        title: 'Gravehollow Port',
+        subtitle: 'A better look at the Gravehollow port.',
+        span: 2
+      },
+      {
+        image: {
+          link: 'https://ik.imagekit.io/p9k6bhc9p/D&D/PXL_20230806_191708143.jpg?updatedAt=1746313503689'
+        },
+        title: 'Abandoned Church Map',
+        subtitle: 'The abandoned church map, a stealth level designed for infiltration. The heroes got detected in 1 turn. RIP.',
+        span: 2
+      },
+      {
+        image: {
+          link: 'https://ik.imagekit.io/p9k6bhc9p/D&D/PXL_20240818_195215821.jpg?updatedAt=1746313503867'
+        },
+        title: 'Shoebox Tavern',
+        subtitle: 'Shoebox tavern that was made with a literal shoebox, popsicle sticks, paint, and some 3D-printed furniture. That\'s Peter Pan stealthily looking down.',
+        span: 2
+      },
+      {
+        image: {
+          link: 'https://ik.imagekit.io/p9k6bhc9p/D&D/30.jpeg?updatedAt=1746313498509'
+        },
+        title: 'Tensions Are High',
+        subtitle: 'Tensions are high, will there be TPK tonight?',
+        span: 2
+      },
+      {
+        image: {
+          link: 'https://ik.imagekit.io/p9k6bhc9p/D&D/PXL_20240824_093113188.jpg?updatedAt=1746313524448'
+        },
+        title: 'Gravehollow Frontier Town',
+        subtitle: 'The fastest set I ever made. Took 2 hours. It\'s an old frontier town called Gravehollow. Here culminated the war of the red mists.',
+        span: 2
+      },
+      {
+        image: {
+          link: 'https://ik.imagekit.io/p9k6bhc9p/D&D/WhatsApp%20Image%202024-12-13%20at%2021.47.06.jpeg?updatedAt=1746313524417'
+        },
+        title: 'Last Session of Campaign 1',
+        subtitle: 'The last session of Blood Awakening campaign 1.',
+        span: 2
+      },
+      {
+        image: {
+          link: 'https://ik.imagekit.io/p9k6bhc9p/D&D/IMG_5947.HEIC?updatedAt=1746313504333'
+        },
+        title: 'Gift from Players',
+        subtitle: 'My players gifted me the cloak :)',
+        span: 2
+      }
+    ]
+  }
+  ],
   //The projects
   projects: [
     {

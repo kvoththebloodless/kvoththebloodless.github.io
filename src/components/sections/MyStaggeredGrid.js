@@ -9,7 +9,7 @@ import useWindowSize from '../../utils/hooks/useWindowSize';
 
 
 const MyStaggeredGrid = ({ sections, width="300"}) => {
-  console.log("sections ", sections)
+
 
   const { width: currentWidth } = useWindowSize()
 

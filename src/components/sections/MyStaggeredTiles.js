@@ -1,138 +1,182 @@
-import {
-  StaggeredGridItem,
-} from "react-staggered-grid";
-import { useRef, useEffect, useState } from 'react';
-import lodash from 'lodash-es';
-import styled from 'styled-components';
-import ModalImage from "react-modal-image";
+import { StaggeredGridItem } from "react-staggered-grid";
+import { useState, useEffect } from "react";
+import lodash from "lodash-es";
+import styled from "styled-components";
+import { SectionContainer } from "../common/StyledComponents";
+import { TwitterTweetEmbed } from "react-twitter-embed";
 import { Link } from "react-router-dom";
-import { motion } from 'framer-motion';
-import { Modal } from '@mui/material';
-import { Box } from '@mui/system';
-
-import { TwitterTweetEmbed } from 'react-twitter-embed';
-import { SectionContainer } from '../common/StyledComponents';
+import ReactDOM from "react-dom";
 
 const MyStaggeredTiles = ({ section, iter }) => {
-  const { title, image, list, video, span, externallink,tweet } = section;
-  let [height, setHeight] = useState("px");
-
+  const { title, subtitle, image, list, video, span, externallink, tweet } = section;
   const [open, setOpen] = useState(false);
 
-  const ref = useRef(null)
+  // Close modal on any key press and disable scroll
+  useEffect(() => {
+    const handleKeyPress = (e) => {
+      if (e.key) setOpen(false);
+    };
+    if (open) {
+      window.addEventListener("keydown", handleKeyPress);
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      window.removeEventListener("keydown", handleKeyPress);
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
+  // Modal rendered outside DOM flow to avoid layout shift
+  const modal = open && image ? ReactDOM.createPortal(
+    <ModalOverlay onClick={() => setOpen(false)}>
+      <ModalContent onClick={(e) => e.stopPropagation()}>
+        <CloseButton onClick={() => setOpen(false)}>×</CloseButton>
+        <BigImage src={image.link} />
+      </ModalContent>
+    </ModalOverlay>,
+    document.body
+  ) : null;
+
   const gridpart = (
     <StaggeredGridItem
       index={iter}
       spans={span}
-      style={{ transition: "left 0.3s ease,top 0.3s ease" }}
-      ref={ref}
+      style={{ transition: "left 0.3s ease, top 0.3s ease" }}
     >
       <SectionContainer
         whileHover={{
-          ...(!lodash.isEmpty(image) || !lodash.isEmpty(video) || !lodash.isEmpty(externallink)) &&
-          {
+          ...(!lodash.isEmpty(image) || !lodash.isEmpty(video) || !lodash.isEmpty(externallink)) && {
             scale: 1.05,
-            zIndex: 60
-          }
+            zIndex: 60,
+          },
         }}
       >
         {!lodash.isEmpty(title) && (
-          <CommonSectionDiv >
+          <CommonSectionDiv>
             <Text>{title}</Text>
           </CommonSectionDiv>
         )}
 
+        {!lodash.isEmpty(subtitle) && (
+          <CommonSectionDiv>
+            <Subtitle>{subtitle}</Subtitle>
+          </CommonSectionDiv>
+        )}
+
         {!lodash.isEmpty(list) && (
-          <CommonSectionDiv >
+          <CommonSectionDiv>
             <List>
-              {list.map(listitem => (
-                <ListItem>{listitem.label}</ListItem>
+              {list.map((listitem, index) => (
+                <ListItem key={index}>{listitem.label}</ListItem>
               ))}
             </List>
           </CommonSectionDiv>
         )}
 
         {!lodash.isEmpty(video) && (
-          <CommonSectionDiv >
-            <Video title={video.title} allowfullscreen="allowfullscreen" src={video.link} />
+          <CommonSectionDiv>
+            <Video title={video.title} allowFullScreen src={video.link} />
           </CommonSectionDiv>
         )}
 
         {!lodash.isEmpty(image) && (
-          <CommonSectionDiv >
+          <CommonSectionDiv>
             <Image
               onClick={() => setOpen(true)}
               src={image.link}
               alt="image"
             />
-            <Modal
-              open={open}
-              onClose={() => setOpen(false)}
-            >
-              <ModalContainer>
-                <BigImage src={image.link} />
-              </ModalContainer>
-            </Modal>
           </CommonSectionDiv>
         )}
-        {!lodash.isEmpty(tweet)&&
-            (<TwitterTweetEmbed
-          tweetId={tweet}/>)
-        }
-        
+
+        {!lodash.isEmpty(tweet) && (
+          <CommonSectionDiv>
+            <TwitterTweetEmbed tweetId={tweet} />
+          </CommonSectionDiv>
+        )}
       </SectionContainer>
-    </StaggeredGridItem >
-  )
-    
-  useEffect(() => {
-    setHeight(ref.current.clientHeight + "px")
-  }, [])
+      {modal}
+    </StaggeredGridItem>
+  );
 
-
- 
-   if(lodash.isEmpty(externallink))
-      return gridpart
-   if(externallink.includes("https"))   
-      return <a href={externallink} style={{textDecoration: 'none', color: "white"}}>
+  if (lodash.isEmpty(externallink)) {
+    return gridpart;
+  }
+  if (externallink.includes("https")) {
+    return (
+      <a href={externallink} style={{ textDecoration: "none", color: "white" }} target="_blank" rel="noopener noreferrer">
         {gridpart}
       </a>
+    );
+  }
   return (
     <Link
       key={section.id}
       to={externallink}
-      style={{textDecoration: 'none', color: "white"}}
+      style={{ textDecoration: "none", color: "white" }}
     >
       {gridpart}
     </Link>
-  )
-}
+  );
+};
 
-const ModalContainer = styled.div`
+// Styled Components
+const ModalOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
-  /* height: 100vh; */
+  z-index: 1000;
 `;
 
-const BigImage = styled.img`
-  width: 90vw;
-  height: 80vh;
-  object-fit: contain;
+const ModalContent = styled.div`
+  position: relative;
+  background: #111;
+  padding: 1rem;
+  border-radius: 10px;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+`;
+
+const CloseButton = styled.button`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
 `;
 
 const Image = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: scale-down;;
+  max-height: 40vh;
+  object-fit: scale-down;
+  cursor: pointer;
 `;
 
-const Video = styled.iframe.attrs({
-  allowFullScreen: true
-})`
-  width: 100%;
-  height: ${props => props.big ? '80vh' : '30vh'};
-  border: none;
-  overflow:hidden;
+const BigImage = styled.img`
+  max-height: 80vh;
+  max-width: 100%;
+  object-fit: contain;
+`;
+const Subtitle = styled.p`
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-top: 0.5rem;
 `;
 
 const Text = styled.p`
@@ -141,18 +185,10 @@ const Text = styled.p`
   font-weight: 800;
 `;
 
-const CommonSectionDiv = styled.div`
-  /* width: 100%; */
-  /* height: ${props => props.height + "px"}; */
-  /* text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; */
-`;
+const CommonSectionDiv = styled.div``;
 
 const List = styled.ul`
-  padding:1rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   row-gap: 2rem;
@@ -161,8 +197,16 @@ const List = styled.ul`
 const ListItem = styled.li`
   text-decoration: none;
   font-size: 1.2rem;
-  word-break: break-all;
+  word-break: break-word;
 `;
 
+const Video = styled.iframe.attrs({
+  allowFullScreen: true,
+})`
+  width: 100%;
+  height: ${(props) => (props.big ? "80vh" : "30vh")};
+  border: none;
+  overflow: hidden;
+`;
 
 export default MyStaggeredTiles;

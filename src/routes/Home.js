@@ -7,11 +7,10 @@ import MyStaggeredGrid from '../components/sections/MyStaggeredGrid';
 import { SectionContainer, Subtitle } from '../components/common/StyledComponents';
 import { Icon as BXIcon, Link } from '@mui/material';
 import { FaBriefcase, FaBriefcaseMedical, FaEnvelope, FaEnvelopeOpen, FaMapMarker, FaMapMarkerAlt } from 'react-icons/fa';
+// filepath: /Users/gourav/Documents/kvoththebloodless.github.io/src/routes/Home.js
+
 const Home = (props) => {
-
-  const { title, subtitle, links, projects,visastatus, location, email, image, blogs, jobs } = portfolioData;
-
-  console.log(portfolioData)
+  const { title, subtitle, links, projects, visastatus, location, email, blogs, jobs, dungeonsAndDragons } = portfolioData;
 
   return (
     <PageContainer>
@@ -19,17 +18,15 @@ const Home = (props) => {
         <ProfilePicComponent src={profilepic} />
         <Title>{title}</Title>
         <Row>
-          <Quote style={{marginTop: 20}}>{subtitle}</Quote>
+          <Quote style={{ marginTop: 20 }}>{subtitle}</Quote>
         </Row>
         <SectionContainer>
           <Row>
             <IconAndText>
               <Icon component={FaMapMarkerAlt} />
-              <Subtitle>
-                {location}
-              </Subtitle>
+              <Subtitle>{location}</Subtitle>
             </IconAndText>
-            
+
             <IconAndText>
               <Icon component={FaBriefcase} />
               <Subtitle>{visastatus}</Subtitle>
@@ -37,28 +34,33 @@ const Home = (props) => {
 
             <IconAndText>
               <Icon component={FaEnvelope} />
-              <Link color='#fff' href={`mailto:${email}`}><Subtitle>{email}</Subtitle></Link>
+              <Link color="#fff" href={`mailto:${email}`}>
+                <Subtitle>{email}</Subtitle>
+              </Link>
             </IconAndText>
-            
           </Row>
 
           <Row>
-            <Links links={links} color='white' />
+            <Links links={links} color="white" />
           </Row>
         </SectionContainer>
-        
       </BackgroundSection>
+
+      {/* Add Dungeons and Dragons Section */}
+      <Divider>Dungeons & Dragons</Divider>
+      <MyStaggeredGrid width="500" sections={dungeonsAndDragons} />
+
       <Divider>Jobs</Divider>
-      <MyStaggeredGrid width='500' sections={jobs} />
+      <MyStaggeredGrid width="500" sections={jobs} />
+
       <Divider>Personal Projects</Divider>
-      <MyStaggeredGrid width='500' sections={projects} />
+      <MyStaggeredGrid width="500" sections={projects} />
+
       <Divider>Dev Posts</Divider>
-      <MyStaggeredGrid width='500' sections={blogs} />
-
+      <MyStaggeredGrid width="500" sections={blogs} />
     </PageContainer>
-
-  )
-}
+  );
+};
 
 const Divider = ({children}) => (
   <DividerContainer>
