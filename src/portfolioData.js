@@ -388,62 +388,96 @@ const blogs = [
 
 const jobs = [
   {
-    id: 'appetizer',
-    time: "06/2020-12/2020",
-    team: "Gourav Acharya",
+    id: 'legendaryheroes',
+    time: "April 2023-Dec 2024",
+    team: "Gourav Acharya, N3TWORK Studios Team",
     image: {
-      link: 'https://ik.imagekit.io/p9k6bhc9p/MaskYourself/appetizermobile.png'
+      link: 'https://www.n3twork.com/wp-content/uploads/2023/01/blog-post-logo-600x403.jpg'
     },
-    title: 'Unity Developer Intern',
+    title: 'Client Game Engineer at N3twork Studios',
     span: 1,
-    externallink: "/job/appetizer",
-    description: 'Mask Yourself was the offical companion app of The Masked Singer® show on Fox.',
+    externallink: "/job/legendaryheroes",
+    description: 'Legendary Heroes Unchained is a free-to-play card battler game developed for WebGL.',
     sections: [
       {
-        title: 'As unity developer intern I was given the impossible task of solely developing the whole app from scratch within 3 months for Android, IOS and WebGL!'
+        title: 'As a Game Engineer, I developed core game features and optimized performance for Legendary Heroes Unchained.',
+        image: {
+          link: 'https://ik.imagekit.io/p9k6bhc9p/legendaryheroes/Screenshot%202025-05-04%20at%202.44.52%E2%80%AFAM.png'
+        }
+      },
+      {
+        title: 'Guilds Feature',
+        span: 2,
+        description: 'Implemented community-driven features like Guilds, which included:',
+        list: [
+          { label: 'In-game chat for players to communicate.' },
+          { label: 'A technology system where players pooled XP to activate buffs.' },
+          { label: 'Leaderboard and event pages to track progress and achievements.' }
+        ],
+        image: {
+          link: 'https://ik.imagekit.io/p9k6bhc9p/legendaryheroes/Screenshot%202025-05-04%20at%203.22.35%E2%80%AFAM.png'
+        }
+      },
+      {
+        title: 'Fusion System',
+        span: 2,
+        description: 'Developed the Fusion system, allowing players to combine heroes to create new skills with features like:',
+        list: [
+          { label: 'Awakening, upgrading, or inheriting skills from burned heroes.' },
+          { label: 'Custom hero combinations with unique abilities.' }
+        ],
+        image: {
+          link: 'https://ik.imagekit.io/p9k6bhc9p/legendaryheroes/LHU-Fusion.png?updatedAt=1746471720505&ik-s=ee0ca099e8676147d28e66554afdceb78bb78aab'
+        }
+      },
+      {
+        title: 'Fusion Codex',
+        span: 2,
+        description: 'A recipe system to put together which heroes can be fused to creat new skills',
+        image: {
+          link: 'https://ik.imagekit.io/p9k6bhc9p/legendaryheroes/LHU-Codex.png?updatedAt=1746471720957&ik-s=ec9c2687825165b240607291db6a174401833828'
+        }
+
+      },
+      {
+        title: 'Battle System Optimization',
+        span: 2,
+        description: 'Enhanced the battle system by:',
+        list: [
+          { label: 'Optimizing simulation code and restructuring it for VFX event triggers.' },
+          { label: 'Streamlining workflows for artists and reducing per-frame memory allocation by 30%.' }
+        ]
+      },
+      {
+        title: 'Memory Optimization',
+        span: 2,
+        description: 'Achieved significant memory usage improvements:',
+        list: [
+          { label: 'Reduced per-frame memory allocation in the core battle loop by 30%.' },
+          { label: 'Reduced Guild Chat memory usage by 80% through extensive object pooling.' }
+        ]
+      },
+      {
+        title: 'LiveOps and Cross-Functional Collaboration',
+        span: 2,
+        description: 'Acted as the primary LiveOps engineer, resolving critical issues and improving release efficiency. Responsibilities included:',
+        list: [
+          { label: 'Authoring Technical Design Documents.' },
+          { label: 'Leading Engineering LiveOps meetings and triaging tickets.' },
+          { label: 'Supporting DevOps tasks and ensuring smooth operations.' }
+        ]
       },
       {
         title: 'Made using',
         list: [
           { label: 'Unity' },
-          { label: 'Firebase' },
-          { label: 'Javascript' },
-          { label: 'html' },
-          { label: 'css' }
+          { label: 'C#' },
+          { label: 'WebGL' }
         ]
-      },
-      {
-        title: "Mask Yourself was released in 2020!",
-        image: { link: 'https://ik.imagekit.io/p9k6bhc9p/MaskYourself/mask3.gif' }
-      },
-      {
-        title: "Dev Tasks in Brief",
-        span: 3,
-        list: [
-          { label: "Created a custom javascript plugin that used the browser implementation of camera for the WebGL version of the app." },
-          { label: "Along with all the customized UI screens I also developed an infinite scrollbar custom UI element by extending Unity's UI components. It had animations for scaling and fading too." },
-          { label: "Worked with another developer to setup a pipeline so that new costumes added to the app on a day to day basis were pre-processed for compositing user's head image and creating the costume." },
-          { label: "Optimized the memory usage and added variations for logic and content that allowed app to run similarly across the 3 platforms." },
-          { label: "Developed a workflow where branding was added to the images based on zipcode provided by the player." },
-          { label: "Integrated push message notification,analytics and remote control using Firebase. Remote control allowed app to be in maintainance mode when needed." },
-          { label: "Provided live hotfixes to get the app working for the Launch event." },
-          { label: "Deployed the app to AppStore, PlayStore and to Fox's official Mask Yourself Website." }
-        ],
-        tweet: "1339259774504902656"
-      },
-      {
-        span: 1,
-        tweet: "1331689113943240704"
-      },
-      {
-        span: 2,
-        title: "Mask yourself advt.",
-        video: {
-          link: 'https://www.youtube.com/embed/Zn7_0jN12cs'
-        }
       }
     ]
   },
+
   {
     id: 'summitvr',
     time: "Dec 2020-July 2022",
@@ -543,6 +577,63 @@ const jobs = [
     ]
   },
   {
+    id: 'appetizer',
+    time: "06/2020-12/2020",
+    team: "Gourav Acharya",
+    image: {
+      link: 'https://ik.imagekit.io/p9k6bhc9p/MaskYourself/appetizermobile.png'
+    },
+    title: 'Unity Developer',
+    span: 1,
+    externallink: "/job/appetizer",
+    description: 'Mask Yourself was the offical companion app of The Masked Singer® show on Fox.',
+    sections: [
+      {
+        title: 'As unity developer I was given the impossible task of solely developing the whole app from scratch within 3 months for Android, IOS and WebGL!'
+      },
+      {
+        title: 'Made using',
+        list: [
+          { label: 'Unity' },
+          { label: 'Firebase' },
+          { label: 'Javascript' },
+          { label: 'html' },
+          { label: 'css' }
+        ]
+      },
+      {
+        title: "Mask Yourself was released in 2020!",
+        image: { link: 'https://ik.imagekit.io/p9k6bhc9p/MaskYourself/mask3.gif' }
+      },
+      {
+        title: "Dev Tasks in Brief",
+        span: 3,
+        list: [
+          { label: "Created a custom javascript plugin that used the browser implementation of camera for the WebGL version of the app." },
+          { label: "Along with all the customized UI screens I also developed an infinite scrollbar custom UI element by extending Unity's UI components. It had animations for scaling and fading too." },
+          { label: "Worked with another developer to setup a pipeline so that new costumes added to the app on a day to day basis were pre-processed for compositing user's head image and creating the costume." },
+          { label: "Optimized the memory usage and added variations for logic and content that allowed app to run similarly across the 3 platforms." },
+          { label: "Developed a workflow where branding was added to the images based on zipcode provided by the player." },
+          { label: "Integrated push message notification,analytics and remote control using Firebase. Remote control allowed app to be in maintainance mode when needed." },
+          { label: "Provided live hotfixes to get the app working for the Launch event." },
+          { label: "Deployed the app to AppStore, PlayStore and to Fox's official Mask Yourself Website." }
+        ],
+        tweet: "1339259774504902656"
+      },
+      {
+        span: 1,
+        tweet: "1331689113943240704"
+      },
+      {
+        span: 2,
+        title: "Mask yourself advt.",
+        video: {
+          link: 'https://www.youtube.com/embed/Zn7_0jN12cs'
+        }
+      }
+    ]
+  },
+  {
     id: 'amazon',
     time: "08/2022-11/2022",
     team: "Gourav Acharya",
@@ -559,88 +650,9 @@ const jobs = [
         title: "Prime focus was on owning and developing game mechanics and Optimizing toolkits."
       }
     ]
-  },
-  {
-    id: 'legendaryheroes',
-    time: "April 2023-Dec 2024",
-    team: "Gourav Acharya, N3TWORK Studios Team",
-    image: {
-      link: 'https://www.n3twork.com/wp-content/uploads/2023/01/blog-post-logo-600x403.jpg'
-    },
-    title: 'Client Game Engineer at N3twork Studios',
-    span: 1,
-    externallink: "/job/legendaryheroes",
-    description: 'Legendary Heroes Unchained is a free-to-play card battler game developed for WebGL.',
-    sections: [
-      {
-        title: 'As a Game Engineer, I developed core game features and optimized performance for Legendary Heroes Unchained.',
-        image: {
-          link: 'https://ik.imagekit.io/p9k6bhc9p/legendaryheroes/Screenshot%202025-05-04%20at%202.44.52%E2%80%AFAM.png'
-        }
-      },
-      {
-        title: 'Guilds Feature',
-        span: 2,
-        description: 'Implemented community-driven features like Guilds, which included:',
-        list: [
-          { label: 'In-game chat for players to communicate.' },
-          { label: 'A technology system where players pooled XP to activate buffs.' },
-          { label: 'Leaderboard and event pages to track progress and achievements.' }
-        ],
-        image: {
-          link: 'https://ik.imagekit.io/p9k6bhc9p/legendaryheroes/Screenshot%202025-05-04%20at%203.22.35%E2%80%AFAM.png'
-        }
-      },
-      {
-        title: 'Fusion System',
-        span: 2,
-        description: 'Developed the Fusion system, allowing players to combine heroes to create new skills with features like:',
-        list: [
-          { label: 'Awakening, upgrading, or inheriting skills from burned heroes.' },
-          { label: 'Custom hero combinations with unique abilities.' }
-        ],
-        image: {
-          link: 'https://ik.imagekit.io/p9k6bhc9p/legendaryheroes/Screenshot%202025-05-04%20at%206.21.09%E2%80%AFPM.png'
-        }
-      },
-      {
-        title: 'Battle System Optimization',
-        span: 2,
-        description: 'Enhanced the battle system by:',
-        list: [
-          { label: 'Optimizing simulation code and restructuring it for VFX event triggers.' },
-          { label: 'Streamlining workflows for artists and reducing per-frame memory allocation by 30%.' }
-        ]
-      },
-      {
-        title: 'Memory Optimization',
-        span: 2,
-        description: 'Achieved significant memory usage improvements:',
-        list: [
-          { label: 'Reduced per-frame memory allocation in the core battle loop by 30%.' },
-          { label: 'Reduced Guild Chat memory usage by 80% through extensive object pooling.' }
-        ]
-      },
-      {
-        title: 'LiveOps and Cross-Functional Collaboration',
-        span: 2,
-        description: 'Acted as the primary LiveOps engineer, resolving critical issues and improving release efficiency. Responsibilities included:',
-        list: [
-          { label: 'Authoring Technical Design Documents.' },
-          { label: 'Leading Engineering LiveOps meetings and triaging tickets.' },
-          { label: 'Supporting DevOps tasks and ensuring smooth operations.' }
-        ]
-      },
-      {
-        title: 'Made using',
-        list: [
-          { label: 'Unity' },
-          { label: 'C#' },
-          { label: 'WebGL' }
-        ]
-      }
-    ]
   }
+
+
 ];
 
 const portfolioData = {

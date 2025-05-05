@@ -14,7 +14,7 @@ import { TwitterTweetEmbed } from 'react-twitter-embed';
 import { SectionContainer } from '../common/StyledComponents';
 
 const MyStaggeredTiles = ({ section, iter }) => {
-  const { title, subtitle,image, list, video, span, externallink,tweet } = section;
+  const { title, subtitle,image, list, video, span, externallink,tweet,description } = section;
   let [height, setHeight] = useState("px");
 
   const [open, setOpen] = useState(false);
@@ -48,7 +48,12 @@ const MyStaggeredTiles = ({ section, iter }) => {
               </CommonSectionDiv>
             )}
     
-        
+    {!lodash.isEmpty(description) && (
+              <CommonSectionDiv>
+              <Text>{description}</Text> 
+              </CommonSectionDiv>
+            )}
+    
         {!lodash.isEmpty(list) && (
           <CommonSectionDiv >
             <List>
@@ -100,7 +105,7 @@ const MyStaggeredTiles = ({ section, iter }) => {
    if(lodash.isEmpty(externallink))
       return gridpart
    if(externallink.includes("https"))   
-      return <a href={externallink} style={{textDecoration: 'none', color: "white"}}>
+      return <a href={externallink} style={{textDecoration: 'none', color: "white" }}>
         {gridpart}
       </a>
   return (
@@ -108,6 +113,7 @@ const MyStaggeredTiles = ({ section, iter }) => {
       key={section.id}
       to={externallink}
       style={{textDecoration: 'none', color: "white"}}
+      onClick={() => window.scrollTo(0, 0)}
     >
       {gridpart}
     </Link>
@@ -143,7 +149,7 @@ const Video = styled.iframe.attrs({
 `;
 
 const Text = styled.p`
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
   font-weight: 800;
 `;

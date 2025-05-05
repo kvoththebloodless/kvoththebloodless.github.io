@@ -46,12 +46,14 @@ const Home = (props) => {
         </SectionContainer>
       </BackgroundSection>
 
-      {/* Add Dungeons and Dragons Section */}
-      <Divider>Dungeons & Dragons</Divider>
-      <MyStaggeredGrid width="500" sections={dungeonsAndDragons} />
+
 
       <Divider>Jobs</Divider>
       <MyStaggeredGrid width="500" sections={jobs} />
+
+      {/* Add Dungeons and Dragons Section */}
+      <Divider>Dungeons & Dragons</Divider>
+      <MyStaggeredGrid width="500" sections={dungeonsAndDragons} />
 
       <Divider>Personal Projects</Divider>
       <MyStaggeredGrid width="500" sections={projects} />
