@@ -14,7 +14,7 @@ import { TwitterTweetEmbed } from 'react-twitter-embed';
 import { SectionContainer } from '../common/StyledComponents';
 
 const MyStaggeredTiles = ({ section, iter }) => {
-  const { title, image, list, video, span, externallink,tweet } = section;
+  const { title, subtitle,image, list, video, span, externallink,tweet } = section;
   let [height, setHeight] = useState("px");
 
   const [open, setOpen] = useState(false);
@@ -38,10 +38,17 @@ const MyStaggeredTiles = ({ section, iter }) => {
       >
         {!lodash.isEmpty(title) && (
           <CommonSectionDiv >
-            <Text>{title}</Text>
+            <h1>{title}</h1>
           </CommonSectionDiv>
         )}
 
+            {!lodash.isEmpty(subtitle) && (
+              <CommonSectionDiv>
+              <Text>{subtitle}</Text> 
+              </CommonSectionDiv>
+            )}
+    
+        
         {!lodash.isEmpty(list) && (
           <CommonSectionDiv >
             <List>
