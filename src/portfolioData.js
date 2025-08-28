@@ -20,6 +20,7 @@ const portfolio_types = {
 }
 
 const blogs = [
+
   {
     id: 'howcamnav',
     span: '1',
@@ -675,6 +676,19 @@ const portfolioData = {
       link: 'https://www.linkedin.com/in/gourav-acharya/'
     }
   ],
+  animations: [
+    {
+      title: "Blood Awakening",
+      video: { link: "https://www.youtube.com/embed/vW2y5M1iy_M?si=x_i4yx9lNroiiNSX" },
+      description: "A title credit sequence(with original soundscore) created using Unity and Garageband by me for my D&D campaign called Blood Awakening. Art by Oraborus_art on Fiverr."
+    },
+    {
+      title: "Don't Touch My Coffee!",
+      video: { link: "https://www.instagram.com/reel/DFu6fMets-q/embed" },
+      description: "A stop motion animation created using lego figures and other DIY items at home."
+    }
+    // Add more as needed
+  ],
   dungeonsAndDragons: [
     {
       title: 'Dungeons & Dragons',
@@ -682,6 +696,12 @@ const portfolioData = {
       description: 'A gallery of my long running D&D campaign called Blood Awakening',
       externallink: "/dungeons-and-dragons",
       sections: [
+        {
+          title: "Blood Awakening",
+          span: 3,
+          video: { link: "https://www.youtube.com/embed/vW2y5M1iy_M?si=x_i4yx9lNroiiNSX" },
+          description: "The title credit sequence(with original soundscore) created using Unity and Garageband by me for my D&D campaign called Blood Awakening. Art by Oraborus_art on Fiverr."
+        },
         {
           image: { link: 'https://ik.imagekit.io/p9k6bhc9p/D&D/PXL_20240818_193335652.jpg' },
           title: 'A Galleon ship called The Grave Betrayer',

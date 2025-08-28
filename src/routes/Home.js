@@ -10,7 +10,7 @@ import { FaBriefcase, FaBriefcaseMedical, FaEnvelope, FaEnvelopeOpen, FaMapMarke
 // filepath: /Users/gourav/Documents/kvoththebloodless.github.io/src/routes/Home.js
 
 const Home = (props) => {
-  const { title, subtitle, links, projects, visastatus, location, email, blogs, jobs, dungeonsAndDragons } = portfolioData;
+  const { title, subtitle, links, projects, visastatus, location, email, blogs, jobs, dungeonsAndDragons,animations } = portfolioData;
 
   return (
     <PageContainer>
@@ -51,11 +51,14 @@ const Home = (props) => {
       <Divider>Jobs</Divider>
       <MyStaggeredGrid width="500" sections={jobs} />
 
+      <Divider>Animation Work</Divider>
+      <MyStaggeredGrid width="500" sections={animations} />
+
       {/* Add Dungeons and Dragons Section */}
       <Divider>Dungeons & Dragons</Divider>
       <MyStaggeredGrid width="500" sections={dungeonsAndDragons} />
 
-      <Divider>Personal Projects</Divider>
+      <Divider>Game Projects</Divider>
       <MyStaggeredGrid width="500" sections={projects} />
 
       <Divider>Dev Posts</Divider>
